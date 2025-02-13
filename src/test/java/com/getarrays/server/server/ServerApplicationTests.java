@@ -1,4 +1,4 @@
-package com.getarrays.server;
+package com.getarrays.server.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

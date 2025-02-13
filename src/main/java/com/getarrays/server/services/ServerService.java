@@ -1,6 +1,6 @@
-package com.getarrays.services;
+package com.getarrays.server.services;
 
-import com.getarrays.model.Server;
+import com.getarrays.server.model.Server;
 
 import java.io.IOException;
 import java.util.Collection;

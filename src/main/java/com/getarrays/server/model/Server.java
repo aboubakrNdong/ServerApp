@@ -1,6 +1,6 @@
-package com.getarrays.model;
+package com.getarrays.server.model;
 
-import com.getarrays.enumerations.StatusEnum;
+import com.getarrays.server.enumerations.StatusEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

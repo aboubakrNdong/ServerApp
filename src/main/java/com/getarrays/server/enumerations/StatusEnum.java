@@ -1,4 +1,4 @@
-package com.getarrays.enumerations;
+package com.getarrays.server.enumerations;
 
 public enum StatusEnum {
 
