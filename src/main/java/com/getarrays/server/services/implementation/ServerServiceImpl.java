@@ -28,14 +28,14 @@ public class ServerServiceImpl implements ServerService {
     private final ServerRepository serverRepository;
 
     @Override
-    public Server create(Server server) {
+    public Server createNewServer(Server server) {
        log.info("Saving new Server : {}", server.getName());
        server.setImageUrl(setServerImageUrl());
        return serverRepository.save(server);
     }
 
     @Override
-    public Server ping(String ipAddress) throws IOException {
+    public Server pingServerWithIpAddress(String ipAddress) throws IOException {
         log.info("Pinging server IP: {}", ipAddress);
         Server server = serverRepository.findByIpAddress(ipAddress);
         InetAddress address = InetAddress.getByName(ipAddress);
@@ -45,25 +45,20 @@ public class ServerServiceImpl implements ServerService {
     }
 
     @Override
-    public Collection<Server> list(int limit) {
+    public Collection<Server> getAllServers(int limit) {
         log.info("Fetching all servers");
         return serverRepository.findAll(PageRequest.of(0, limit)).toList();
     }
 
     @Override
-    public Server get(Long id) {
+    public Server getServerById(Long id) {
         log.info("Fetching server by Id: {}", id);
         return serverRepository.findById(id).get();
     }
 
-    @Override
-    public Server update(Server server) {
-        log.info("Updating Server : {}", server.getName());
-        return serverRepository.save(server);
-    }
 
     @Override
-    public Boolean delete(Long id) {
+    public Boolean deleteServerById(Long id) {
         log.info("Deleting server by ID: {}", id);
         serverRepository.deleteById(id);
         return TRUE;

@@ -27,7 +27,7 @@ public class ServerController {
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
-                        .data(Map.of("servers", serverService.list(30)))
+                        .data(Map.of("servers", serverService.getAllServers(30)))
                         .message("Servers retrieved")
                         .status(OK)
                         .statusCode(OK.value())
@@ -37,7 +37,7 @@ public class ServerController {
 
     @GetMapping("/ping/{ipAddress}")
     public ResponseEntity<Response> pingServer(@PathVariable("ipAddress") String ipAddress) throws IOException {
-        Server server = serverService.ping(ipAddress);
+        Server server = serverService.pingServerWithIpAddress(ipAddress);
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
@@ -54,7 +54,7 @@ public class ServerController {
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
-                        .data(Map.of("server", serverService.create(server)))
+                        .data(Map.of("server", serverService.createNewServer(server)))
                         .message("Server created")
                         .status(CREATED)
                         .statusCode(CREATED.value())
@@ -67,7 +67,7 @@ public class ServerController {
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
-                        .data(Map.of("server", serverService.get(id)))
+                        .data(Map.of("server", serverService.getServerById(id)))
                         .message("Server retrieved")
                         .status(OK)
                         .statusCode(OK.value())
@@ -80,7 +80,7 @@ public class ServerController {
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
-                        .data(Map.of("deleted", serverService.delete(id)))
+                        .data(Map.of("deleted", serverService.deleteServerById(id)))
                         .message("Server deleted")
                         .status(OK)
                         .statusCode(OK.value())
