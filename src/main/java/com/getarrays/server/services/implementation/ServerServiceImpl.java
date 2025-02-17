@@ -17,6 +17,7 @@ import java.util.Random;
 
 import static com.getarrays.server.enumerations.StatusEnum.SERVER_DOWN;
 import static com.getarrays.server.enumerations.StatusEnum.SERVER_UP;
+import static com.getarrays.server.utils.Constantes.*;
 import static java.lang.Boolean.TRUE;
 
 @RequiredArgsConstructor
@@ -26,23 +27,40 @@ import static java.lang.Boolean.TRUE;
 public class ServerServiceImpl implements ServerService {
 
     private final ServerRepository serverRepository;
+    private final Random random = new Random();
 
     @Override
-    public Server createNewServer(Server server) {
-       log.info("Saving new Server : {}", server.getName());
-       server.setImageUrl(setServerImageUrl());
+    public Server createNewServer(final Server server) {
+        log.info("Creating new server: {}", server.getName());
+        server.setImageUrl(generateServerImageUrl());
+        return serverRepository.save(server);
+    }
+
+
+    private String generateServerImageUrl() {
+        String randomImage = SERVER_IMAGES[random.nextInt(SERVER_IMAGES.length)];
+        return ServletUriComponentsBuilder.fromCurrentContextPath()
+                .path(IMAGE_PATH + randomImage)
+                .toUriString();
+    }
+
+    @Override
+    public Server pingServerWithIpAddress(final String ipAddress) throws IOException {
+       log.info("Pinging server IP: {}", ipAddress);
+       Server server = findServerByIpAddress(ipAddress);
+       updateServerStatus(server, ipAddress);
        return serverRepository.save(server);
+   }
+
+    private Server findServerByIpAddress(final String ipAddress) {
+        return serverRepository.findByIpAddress(ipAddress);
     }
 
-    @Override
-    public Server pingServerWithIpAddress(String ipAddress) throws IOException {
-        log.info("Pinging server IP: {}", ipAddress);
-        Server server = serverRepository.findByIpAddress(ipAddress);
+    private void updateServerStatus(final Server server, final String ipAddress) throws IOException {
         InetAddress address = InetAddress.getByName(ipAddress);
-        server.setStatusEnum(address.isReachable(10000) ? SERVER_UP : SERVER_DOWN);
-        serverRepository.save(server);
-        return server;
+        server.setStatusEnum(address.isReachable(PING_TIMEOUT_MS) ? SERVER_UP : SERVER_DOWN);
     }
+
 
     @Override
     public Collection<Server> getAllServers(int limit) {
@@ -56,7 +74,6 @@ public class ServerServiceImpl implements ServerService {
         return serverRepository.findById(id).get();
     }
 
-
     @Override
     public Boolean deleteServerById(Long id) {
         log.info("Deleting server by ID: {}", id);
@@ -64,8 +81,4 @@ public class ServerServiceImpl implements ServerService {
         return TRUE;
     }
 
-    private String setServerImageUrl() {
-        String[] imagesNames = {"server1.jpg", "server2.jpg", "server3.jpg", "server4.jpg"};
-        return ServletUriComponentsBuilder.fromCurrentContextPath().path("/server/image/" + imagesNames[new Random().nextInt(4)]).toUriString();
-    }
 }
