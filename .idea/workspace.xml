@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AIAssistantCustomInstructionsStorage">
+    <option name="instructions">
+      <map>
+        <entry key="AIAssistant.VCS.GenerateCommitMessage">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.VCS.GenerateCommitMessage" />
+              <option name="content" value="Write a clear commit message in the Conventional Commits format. The message must be concise but informative, specifying the purpose of the change, the impact on the code and the files concerned.&#10;Use the following format:&#10;&#10;type(scope): description&#10;&#10;Examples of type:&#10;&#10;feat: New feature added&#10;fix: Fixed a bug&#10;refactor: Code modification without behavior change&#10;chore: Side tasks (update dependencies, configuration...)&#10;test: Adding or modifying tests&#10;docs: Documentation Update" />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b416a6ed-15fc-4746-9ceb-a9e6cebd938f" name="Changes" comment="feat(server): migrate to YAML config, update service method names, and add seed data" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2swXN7uzekuXJnSiuq2nDEVoMKW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ServerApplication.executor": "Run",
+    "JUnit.ServerServiceImpTest.createNewServer_ShouldSaveAndReturnServer.executor": "Run",
+    "JUnit.ServerServiceImpTest.executor": "Run",
+    "JUnit.ServerServiceImpTest.getAllServers_WithZeroLimit_ShouldReturnEmptyList.executor": "Run",
+    "JUnit.ServerServiceImpTest.pingServerWithIpAddress_ServerDown_ShouldUpdateStatus.executor": "Run",
+    "JUnit.ServerServiceImpTest.pinsServerWithIpAddress_ServerUp_ShouldUpdateStatus.executor": "Run",
+    "Maven.server [clean].executor": "Run",
+    "Maven.server [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pc/Documents/training/Project_Server/server",
+    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.getarrays.server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ServerServiceImpTest">
+    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.getarrays.server.ServerApplication" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.getarrays.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.getarrays.server.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.getarrays.server.service" />
+      <option name="MAIN_CLASS_NAME" value="com.getarrays.server.service.ServerServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerServiceImpTest.createNewServer_ShouldSaveAndReturnServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.getarrays.server.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.getarrays.server.service" />
+      <option name="MAIN_CLASS_NAME" value="com.getarrays.server.service.ServerServiceImpTest" />
+      <option name="METHOD_NAME" value="createNewServer_ShouldSaveAndReturnServer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerServiceImpTest.pingServerWithIpAddress_ServerDown_ShouldUpdateStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.getarrays.server.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.getarrays.server.service" />
+      <option name="MAIN_CLASS_NAME" value="com.getarrays.server.service.ServerServiceImpTest" />
+      <option name="METHOD_NAME" value="pingServerWithIpAddress_ServerDown_ShouldUpdateStatus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerServiceImpTest.pinsServerWithIpAddress_ServerUp_ShouldUpdateStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.getarrays.server.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.getarrays.server.service" />
+      <option name="MAIN_CLASS_NAME" value="com.getarrays.server.service.ServerServiceImpTest" />
+      <option name="METHOD_NAME" value="pinsServerWithIpAddress_ServerUp_ShouldUpdateStatus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ServerServiceImpTest" />
+        <item itemvalue="JUnit.ServerServiceImpTest.pinsServerWithIpAddress_ServerUp_ShouldUpdateStatus" />
+        <item itemvalue="JUnit.ServerServiceImpTest.createNewServer_ShouldSaveAndReturnServer" />
+        <item itemvalue="Application.ServerApplication" />
+        <item itemvalue="JUnit.ServerServiceImpTest.pingServerWithIpAddress_ServerDown_ShouldUpdateStatus" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b416a6ed-15fc-4746-9ceb-a9e6cebd938f" name="Changes" comment="" />
+      <created>1739367568120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739367568120</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: Implement ServerService and its default methods&#10;Add `ServerService` interface and its implementation `ServerServiceImpl` with methods">
+      <option name="closed" value="true" />
+      <created>1739381184132</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739381184132</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(server): add server CRUD operations and controller functionality">
+      <option name="closed" value="true" />
+      <created>1739453934334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739453934334</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(server): migrate to YAML config, update service method names, and add seed data">
+      <option name="closed" value="true" />
+      <created>1739530299420</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739530299420</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add ServerService interface and its implementation&#10;&#10;Introduce the `ServerService` interface and its `ServerServiceImpl` implementation to define and handle core server management operations such as creation, pinging, retrieval, updating, and deletion of server data. Basic method stubs and partial functionality, including server pinging logic, have been implemented, with placeholders for future enhancements." />
+    <MESSAGE value="feat: Implement ServerService and its default methods&#10;Add `ServerService` interface and its implementation `ServerServiceImpl` with methods" />
+    <MESSAGE value="Refactor server package structure and add ServerController.&#10;&#10;Moved all server-related classes to a dedicated `com.getarrays.server` package for better organization. Implemented `ServerController` with endpoints for server management and introduced the `Response` model to standardize API responses. Added functionality for CRUD operations and server image handling in the `ServerServiceImpl` class." />
+    <MESSAGE value="refactor(server): restructure packages and implement controller&#10;&#10;Moved all classes to the `com.getarrays.server` package for consistency. Added functionality for `ServerController` and improved service methods to enhance server CRUD operations." />
+    <MESSAGE value="`refactor(server): restructure package hierarchy and enhance server CRUD operations`&#10;&#10;This commit reorganizes the package structure under `com.getarrays.server`, implements CRUD functionality in `ServerServiceImpl`, improves server listing with pagination, and adds controller endpoints for managing servers. Introduced a `Response` model for standardized API responses." />
+    <MESSAGE value="`refactor: reorganize package structure and implement server CRUD endpoints`&#10;&#10;- Moved classes to `com.getarrays.server` for clearer module organization.&#10;- Added CRUD operations and server image URL functionality in `ServerServiceImpl`.&#10;- Implemented `Response` model and `ServerController` for API endpoints.&#10;- Updated imports and references across affected classes." />
+    <MESSAGE value="refactor: restructure package hierarchy and enhance server functionality" />
+    <MESSAGE value="refactor(server): reorganize package structure and implement server CRUD operations" />
+    <MESSAGE value="```  &#10;feat(server): restructure packages and implement ServerController&#10;&#10;- Restructured packages under `com.getarrays.server` for better organization.&#10;- Implemented `ServerController` with endpoints for managing servers (list, create, get, ping, delete).&#10;- Added `Response` model for standardized API responses.&#10;- Completed methods in `ServerServiceImpl`, including server CRUD operations and image URL generation.&#10;```  " />
+    <MESSAGE value="feat(server): add server CRUD operations and controller functionality" />
+    <MESSAGE value="feat(server): migrate to YAML config, update service method names, and add seed data" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(server): migrate to YAML config, update service method names, and add seed data" />
+  </component>
+</project>
